@@ -23,7 +23,7 @@ class CreateStatisticsRequestsTable extends Migration
             $table->integer('device_id')->unsigned();
             $table->integer('platform_id')->unsigned();
             $table->integer('path_id')->unsigned();
-            $table->integer('geoip_id')->unsigned()->nullable;
+            $table->integer('geoip_id')->nullable;
             $table->nullableMorphs('user');
             $table->string('session_id');
             $table->integer('status_code');
