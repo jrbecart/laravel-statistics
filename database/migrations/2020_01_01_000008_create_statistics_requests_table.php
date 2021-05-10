@@ -23,7 +23,7 @@ class CreateStatisticsRequestsTable extends Migration
             $table->integer('device_id')->unsigned();
             $table->integer('platform_id')->unsigned();
             $table->integer('path_id')->unsigned();
-            $table->integer('geoip_id')->unsigned();
+            $table->integer('geoip_id')->unsigned()->nullable;
             $table->nullableMorphs('user');
             $table->string('session_id');
             $table->integer('status_code');
@@ -49,8 +49,8 @@ class CreateStatisticsRequestsTable extends Migration
                   ->onDelete('cascade')->onUpdate('cascade');
             $table->foreign('path_id')->references('id')->on(config('rinvex.statistics.tables.paths'))
                   ->onDelete('cascade')->onUpdate('cascade');
-            $table->foreign('geoip_id')->references('id')->on(config('rinvex.statistics.tables.geoips'))
-                  ->onDelete('cascade')->onUpdate('cascade');
+            //$table->foreign('geoip_id')->references('id')->on(config('rinvex.statistics.tables.geoips'))
+            //      ->onDelete('cascade')->onUpdate('cascade');
         });
     }
 
