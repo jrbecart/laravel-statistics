@@ -49,7 +49,7 @@ class Request extends Model
         'device_id' => 'integer',
         'platform_id' => 'integer',
         'path_id' => 'integer',
-        'geoip_id' => 'integer',
+        //'geoip_id' => 'integer',
         'user_id' => 'integer',
         'user_type' => 'string',
         'session_id' => 'string',
