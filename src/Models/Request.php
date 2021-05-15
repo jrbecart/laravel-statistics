@@ -90,7 +90,7 @@ class Request extends Model
         'device_id' => 'required|integer',
         'platform_id' => 'required|integer',
         'path_id' => 'required|integer',
-        'geoip_id' => 'required|integer',
+        //'geoip_id' => 'required|integer',
         'user_id' => 'nullable|integer',
         'user_type' => 'nullable|string|strip_tags|max:150',
         'session_id' => 'required|string',
